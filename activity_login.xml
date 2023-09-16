@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:background="#b9f6ca"
+    >
+
+    <TextView
+        android:id="@+id/txtHeading1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgLogo1"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_below="@+id/txtHeading1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/meter_logo_new" />
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/imgLogo1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_name"
+        android:hint="@string/enter_your_account_name_here"
+        android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <EditText
+        android:id="@+id/etPhoneNo.1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/etName"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_phone"
+        android:hint="@string/enter_phone_number_here"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etUniqueID1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/etPhoneNo.1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/white"
+        android:drawableStart="@drawable/ic_unique"
+        android:hint="@string/enter_meter_number_here"
+        android:inputType="none"
+        android:maxLength="8"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etUniqueID1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="74dp"
+        android:layout_marginRight="20dp"
+        android:background="#1a237e"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtDontHaveAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/don_t_have_account_sign_up_now"
+        android:textColor="#1e88e5"
+        android:textSize="20dp" />
+
+</RelativeLayout>

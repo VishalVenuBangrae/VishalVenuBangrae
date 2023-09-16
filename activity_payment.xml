@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b9f6ca"
+    tools:context=".PaymentActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1a237e"
+        app:title="Payment"
+        app:titleTextColor="@color/white"
+
+        />
+
+    <ImageView
+        android:id="@+id/rupeeimg"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_below="@+id/toolbarPay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/rupee" />
+
+    <TextView
+        android:id="@+id/due"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rupeeimg"
+        android:layout_marginTop="70dp"
+        android:text="@string/due_amount_to_be_paid_rs_1010"
+        android:textColor="@color/black"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/due"
+        android:layout_marginTop="30dp"
+        android:text="Payment Options (Choose any one):"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="20dp"
+       android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="20dp"
+        >
+
+    <ImageView
+        android:id="@+id/imgCredit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/choose"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/creditcard" />
+
+    <TextView
+        android:id="@+id/txtCredit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose"
+        android:layout_toRightOf="@id/imgCredit"
+        android:layout_marginTop="14dp"
+        android:textSize="20sp"
+        android:text="Pay through credit card"
+        android:textColor="@color/black"
+        android:layout_marginLeft="60dp"
+
+        />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDebit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardCredit"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/imgDebit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/choose"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/imgdebit" />
+
+        <TextView
+            android:id="@+id/txtDebit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose"
+            android:layout_toRightOf="@id/imgCredit"
+            android:layout_marginTop="14dp"
+            android:textSize="20sp"
+            android:text="Pay through Debit card"
+            android:textColor="@color/black"
+            android:layout_marginLeft="60dp"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardUPI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardDebit"
+        app:cardUseCompatPadding="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/imgUPI"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/choose"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/upi" />
+
+        <TextView
+            android:id="@+id/txtUPI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose"
+            android:layout_toRightOf="@id/imgCredit"
+            android:layout_marginTop="14dp"
+            android:textSize="20sp"
+            android:text="Pay through UPI"
+            android:textColor="@color/black"
+            android:layout_marginLeft="60dp"
+
+            />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnProceed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-3dp"
+        android:text="Proceed"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
